@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.order(:name)
+    @categories = Category.includes(:products).order(:name)
   end
 end
